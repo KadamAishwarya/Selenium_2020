@@ -16,26 +16,7 @@ import com.visionIt.freeCrm.utility.BrowserFactory;
 
 public class LoginPageTest extends TestBase{
 
-	public Loginpage login;
-	public WebDriver driver;
 	
-	@BeforeMethod
-	public void setUp()
-	{
-	driver=BrowserFactory.browserSetup(configaDataprovider.getKey("browser"),
-			configaDataprovider.getKey("url"));
-	//login=PageFactory.initElements(driver, Loginpage.class);
-	login=new Loginpage(driver);
-	}
-	@Test(priority=1)
-	public void verifyLoginPageTitleTest()
-	{
-		String actualTitle=login.verifyLoginpageTitle();
-		System.out.println("actual Title of the login page is:"+actualTitle);
-		String expectedTitle="CRMPRO - CRM software for customer "
-				+ "relationship management, sales, and support.";
-		Assert.assertEquals(actualTitle, expectedTitle);
-	}
 	
 	/*@Test(priority=2)
 	public void verifyLoginTest()
